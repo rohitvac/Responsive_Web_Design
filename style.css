@@ -1,0 +1,330 @@
+/* desktop first */
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 11px;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* top header */
+.top-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+
+.logo{
+    width: 5%;
+    height: auto;
+}
+
+/*nav bar*/
+.nav-bar{
+    flex: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+/* anchor tag */
+.nav-bar a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: darkgreen;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-weight: bold;
+    /* background-color: darkgrey; */
+}
+
+/* toggle menu image */
+.menu{
+    position: fixed;
+    right: 0;
+    top:0;
+
+}
+
+/* main section of page */
+.main{
+    display: flex;
+    font-size: 1.6rem;
+    flex-direction: row; /*in case of small screen devices need to do it column */
+    flex-wrap: wrap;
+}
+
+/* left side quick links */
+.quick-links{
+    flex: 10%; /* 10 % for quick links and 90% for main article*/
+    margin-top: 10px;
+    background-color: lightgrey;
+}
+
+
+/* home page main */
+.main-article-home{
+    flex: 90%;
+    margin-top: 10px;
+    background-image: url(imageHome.jfif);
+    background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    /* margin-bottom: 100px; */
+
+}
+
+.main-article-home h3{
+    text-align: inherit;
+    position: relative;
+    top: 85%;
+    left: 70%;
+    transform: translate(-40%, -20%);
+    color: white;
+    font-size: 200%;
+}
+
+
+
+
+/* main contents */
+.main-article{
+    flex: 90%;
+    margin-top: 10px;
+    /* margin-bottom: 100px; */
+
+}
+
+.main-article h1{
+    font-size: 230%;
+    font-family: cursive;
+    color: darkgreen;
+    text-align: center;
+
+}
+
+.main-article p{
+    /* column-count: 5; */
+    margin: 20px;
+    line-height: 35px;
+    word-spacing: 1px;
+}
+
+.reg-form{
+    flex: 90%;
+    margin-top: 10px;
+    height: 79vh;
+}
+
+/*for form border*/
+.reg-form form{
+    margin-left: 75px;
+    /* margin-right: 100px; */
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-bottom:1px solid red;
+    margin: 10px;
+}
+
+input[type=submit]{
+    background-color: green;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.5rem;
+    float: right; /*shift to right*/
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+.video-contents{
+    flex: 90%;
+    height: 78vh;
+}
+
+.video-contents video{
+    margin: 10px;
+    max-width: 100%; /*for original size*/
+    height: auto;
+}
+
+.product-container{
+    flex: 90%;
+    display: flex;
+    flex-wrap: wrap;  /*to keep in the visiable are of the screen*/
+    justify-content: center;
+    text-align: center;
+}
+
+.product{
+    box-shadow: 0 4px 8px 0 grey;
+    /* border: 1px solid grey; */
+    margin: 20px;
+}
+
+.product button{
+    width: 100%;
+    border: none;
+    background-color: gray;
+    color: white;
+    padding: 10px 10px;
+    cursor: pointer;
+
+} 
+
+
+/* image gallery page */
+.image-container{
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;  /*to keep in the visiable are of the screen*/
+    justify-content: center;
+    text-align: center;
+    background-color: lightgray;
+}
+
+
+.image-container h2{
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;  /*to keep in the visiable are of the screen*/
+    justify-content: center;
+    text-align: center;
+    color: darkgreen;
+    font-style: oblique;
+    font-weight: 1000;
+    
+    
+
+}
+
+.image:hover{
+    box-shadow: 0 4px 8px 0 grey;
+    /* border: 1px solid grey; */
+    margin: 10px;
+    text-align: center;
+    border: 5px solid ;
+}
+
+.main-footer{
+    font-size: 1.6rem;
+    display: flex;
+    width: 100%;
+    background-color: lightblue;
+    color: white;
+    /* position: fixed;
+    bottom: 0; */
+}
+
+.main-footer div{
+    flex: 33.33%;
+    text-align: center;
+}
+
+.main-footer ul{
+    list-style-type: none;
+}
+
+.main-footer li :first-child{
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+
+
+/* mobile device */
+@media only screen and (min-width: 0px) and (max-width:500px){
+    html{
+        font-size: 9px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    
+    /* top header */
+    .top-header{
+        flex-direction: column; /*because it should be stack */
+        align-items: center;
+    }
+    
+    
+    .logo{
+        width: 15%;
+    }
+    
+    /* nav bar */
+    .nav-bar{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* left side quick links */
+    .quick-links{
+        display: none;
+    }
+
+    
+    .main-article p{
+        column-count: 1;
+        
+    }
+
+    .reg-form{
+        height: 75vh;
+    }
+    
+    /*for form border*/
+    .reg-form form{
+        margin: 10px;
+        margin-top: 50px;
+    }
+    
+    input[type=text]{
+        box-sizing: border-box;
+        margin: 10px;
+    }
+    
+    input[type=submit]{
+        width: 100%;
+    }
+
+    
+    /* main footer of the page */
+    .main-footer{
+        flex-direction: column;
+    }
+    
+}
+
+
+
+/* tab device */
+@media only screen and (min-width: 501px) and (max-width:700px){
+    html{
+        font-size: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    }
+    
+    .logo{
+        width: 15%;
+    }
+
+    .menu{
+        display: none;
+    }
+    
+    .quick-links{
+        display: none;
+    }
+    
+    .main-article p{
+        column-count: 2;
+    }
+}
